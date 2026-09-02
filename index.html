@@ -170,31 +170,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    height: 80px;
   }
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
     text-decoration: none;
   }
-  .logo-mark {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius);
-    background: var(--offwhite);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .logo-mark svg { width: 20px; height: 20px; }
-  .logo-wordmark {
-    font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-    font-weight: 800;
-    font-size: 17px;
-    letter-spacing: -0.04em;
-    color: var(--dk-headline);
+  .nav-logo img {
+    height: 56px;
+    width: auto;
   }
   .nav-links {
     display: flex;
@@ -232,7 +217,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 64px;
+    padding-top: 80px;
   }
   .hero-two-col {
     display: block;
@@ -896,28 +881,7 @@
 <nav>
   <div class="wrap nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark" aria-label="MarketLoft logo">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logoGrad" x1="10%" y1="10%" x2="90%" y2="90%">
-              <stop offset="0%" style="stop-color:#D946EF;stop-opacity:1" />
-              <stop offset="46%" style="stop-color:#6D28D9;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#67E8F9;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-          <!-- Outer circle -->
-          <circle cx="50" cy="50" r="45" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.6"/>
-          <!-- Top point -->
-          <path d="M 50 10 Q 60 35 50 50 Q 40 35 50 10" stroke="url(#logoGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Right point -->
-          <path d="M 90 50 Q 65 60 50 50 Q 65 40 90 50" stroke="url(#logoGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Bottom point -->
-          <path d="M 50 90 Q 40 65 50 50 Q 60 65 50 90" stroke="url(#logoGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Left point -->
-          <path d="M 10 50 Q 35 40 50 50 Q 35 60 10 50" stroke="url(#logoGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <span class="logo-wordmark">MarketLoft</span>
+      <img src="logo-horizontal.svg" alt="MarketLoft" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
