@@ -1320,28 +1320,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div class="contact-form reveal">
+      <form class="contact-form reveal" id="contactForm" action="https://script.google.com/macros/s/AKfycbxhwz6U_x_D7dEhESE_m3DcN8L6E3M78JHyHKR11maCEaBZz2JwYQRzzTxAbS0acnSc/exec" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label>First name</label>
-            <input type="text" placeholder="Jane">
+            <input type="text" name="firstName" placeholder="Jane" required>
           </div>
           <div class="form-field">
             <label>Last name</label>
-            <input type="text" placeholder="Smith">
+            <input type="text" name="lastName" placeholder="Smith" required>
           </div>
         </div>
         <div class="form-field">
           <label>Work email</label>
-          <input type="email" placeholder="jane@company.com">
+          <input type="email" name="email" placeholder="jane@company.com" required>
         </div>
         <div class="form-field">
           <label>Company</label>
-          <input type="text" placeholder="Your company name">
+          <input type="text" name="company" placeholder="Your company name" required>
         </div>
         <div class="form-field">
           <label>Company stage</label>
-          <select>
+          <select name="companyStage" required>
             <option value="" disabled selected>Select your stage</option>
             <option>Pre-seed / Seed</option>
             <option>Series A</option>
@@ -1352,7 +1352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-field">
           <label>What do you need?</label>
-          <select>
+          <select name="whatTheyNeed" required>
             <option value="" disabled selected>Select a service</option>
             <option>Fractional CMO (retainer)</option>
             <option>Fractional Content Strategy</option>
@@ -1363,10 +1363,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-field">
           <label>Tell us about your situation</label>
-          <textarea placeholder="What's the challenge? What's the timeline? The more context, the better."></textarea>
+          <textarea name="message" placeholder="What's the challenge? What's the timeline? The more context, the better." required></textarea>
         </div>
-        <button class="btn-submit" onclick="handleSubmit(event)">Send it →</button>
-      </div>
+        <button type="submit" class="btn-submit" onclick="handleSubmit(event)">Send it →</button>
+      </form>
     </div>
   </div>
 </section>
@@ -1426,20 +1426,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Form stub
+  // Form submission
   function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target;
-    btn.textContent = 'Sent ✓';
-    btn.style.background = 'rgba(103,232,249,0.15)';
-    btn.style.border = '1px solid #67E8F9';
-    btn.style.color = '#67E8F9';
-    setTimeout(() => {
-      btn.textContent = 'Send it →';
-      btn.style.background = '';
-      btn.style.border = '';
-      btn.style.color = '';
-    }, 3000);
+    const form = document.getElementById('contactForm');
+
+    // Show loading state
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Submit to Google Apps Script
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      mode: 'no-cors'
+    })
+    .then(() => {
+      // Show success state
+      btn.textContent = 'Sent ✓';
+      btn.style.background = 'rgba(103,232,249,0.15)';
+      btn.style.border = '1px solid #67E8F9';
+      btn.style.color = '#67E8F9';
+
+      // Reset form
+      form.reset();
+
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        btn.textContent = 'Send it →';
+        btn.style.background = '';
+        btn.style.border = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 3000);
+    })
+    .catch(() => {
+      btn.textContent = 'Error sending';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Send it →';
+      }, 3000);
+    });
   }
 </script>
 </body>
