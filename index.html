@@ -1436,13 +1436,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    // Submit to Google Apps Script
+    // Submit to Google Apps Script via fetch
     fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
-      mode: 'no-cors'
+      body: new FormData(form)
     })
-    .then(() => {
+    .then(response => {
       // Show success state
       btn.textContent = 'Sent ✓';
       btn.style.background = 'rgba(103,232,249,0.15)';
@@ -1461,7 +1460,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         btn.disabled = false;
       }, 3000);
     })
-    .catch(() => {
+    .catch(error => {
+      console.error('Form error:', error);
       btn.textContent = 'Error sending';
       btn.disabled = false;
       setTimeout(() => {
