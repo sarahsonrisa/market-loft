@@ -1,0 +1,61 @@
+# MarketLoft — Go-to-Market Strategy & Professional Services
+
+MarketLoft is a fractional go-to-market leadership consultancy specializing in construction technology, proptech, and B2B SaaS startups.
+
+## Core Services
+
+### GTM Strategy & Leadership
+Senior go-to-market strategy and execution end-to-end. Positioning, ICP development, demand generation, executive alignment, and team direction. Led by Sarah Lee.
+
+### Sales Process & Enablement
+Sales and marketing alignment through process development, BDR/SDR workflows, outbound scripts, sales enablement playbooks, and funnel analysis. Led by Michael Thiel.
+
+### Content, Inbound & Design
+Content strategy, inbound architecture, thought leadership, newsletters, social strategy, brand identity, and sales collateral. Led by Cheryssa Smith.
+
+### Revenue Operations
+Marketing ops, CRM structure, revenue reporting, analytics, tooling audits, and lead lifecycle management.
+
+### Field Marketing & Events
+Trade show strategy, event planning, pre- and post-event sequences, and field marketing calendar development. Led by Alex Price.
+
+### GTM Planning & Workshops
+Facilitated sessions for annual GTM planning, messaging workshops, and competitive positioning strategy.
+
+## Engagement Models
+
+**Steady Retainer**: $3,000–$5,000/month
+Strategic advisory for companies getting fundamentals in place.
+
+**Momentum Retainer**: $6,000–$10,000/month
+Full GTM strategy ownership and execution. Most common engagement.
+
+**Full Send Retainer**: Custom pricing
+Fully integrated GTM function with entire fractional team (Sarah, Cheryssa, Alex, Michael).
+
+## Team
+
+- **Sarah Lee** (Founder): GTM Strategy & Leadership. 16+ years B2B SaaS and B2C growth marketing. Construction tech expertise across Autodesk, Pype, ConCntric.
+- **Cheryssa Smith**: Content & Inbound Strategy. Content strategy, inbound architecture, thought leadership, project management.
+- **Alex Price**: Design & Field Marketing. Graphic design, brand systems, event marketing management.
+- **Michael Thiel**: Sales Process & Optimization. Sales audits, BDR/SDR workflows, cycle optimization.
+
+## Key Differentiators
+
+1. **Small by design**: Roster capped at 10 active clients to protect quality. Existing clients have approval rights over new overlapping clients.
+
+2. **Construction tech expertise**: 15+ years combined experience. Industry expertise means we know buyers, sales cycles, trade shows, and competitive dynamics before day one.
+
+3. **Built to last**: We build strategy, systems, and documentation that keep your GTM function running. We stay in it with you whether you're building from scratch or scaling what's working.
+
+4. **Senior practitioners only**: 4 senior practitioners, zero junior handoffs. Every advisor does the work themselves.
+
+## Website
+https://market-loft.com
+
+## Contact
+Email: info@market-loft.com
+Location: Virginia, US (Remote-first)
+
+## About This File
+This file is an AI-readable summary of MarketLoft's services, team, and engagement models for language models and AI systems.
