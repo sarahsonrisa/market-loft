@@ -626,7 +626,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     letter-spacing: -0.02em;
     color: var(--dk-headline);
     margin-bottom: 4px;
-    display: none;
+    margin-top: 16px;
   }
   .team-role {
     font-family: 'JetBrains Mono', monospace;
@@ -645,21 +645,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-grow: 1;
   }
   .team-headshot-wrap {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    width: 100%;
   }
   .team-headshot {
-    width: 64px;
-    height: 64px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
     border-radius: var(--radius);
-    background: var(--grad);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: -0.04em;
-    color: rgba(255,255,255,0.9);
+    object-fit: cover;
+    display: block;
   }
   .team-linkedin {
     display: inline-flex;
@@ -1141,8 +1136,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="team-card">
         <div class="team-headshot-wrap">
-          <div class="team-headshot">Sarah Lee</div>
+          <img src="sarah-headshot.png" alt="Sarah Lee headshot" class="team-headshot" style="width: 100%; height: auto; object-fit: cover;">
         </div>
+        <div class="team-name">Sarah Lee</div>
         <div class="team-role">GTM Strategy & Leadership · Founder</div>
         <p class="team-bio">16+ years in B2B SaaS and B2C growth marketing. Deep construction tech expertise across Autodesk, Pype, and ConCntric. Currently active at the Series-A stage.</p>
         <a href="https://linkedin.com/in/sarahwlee" target="_blank" rel="noopener" class="team-linkedin" aria-label="Sarah Lee on LinkedIn">
