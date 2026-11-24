@@ -1388,28 +1388,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div class="contact-form reveal">
+      <form class="contact-form reveal" id="contactForm" action="https://script.google.com/macros/s/AKfycbzNhkEexok9Jb_E1tO6EOVhmGJS1QxUjB9gZ4uFAaDja0ZLfL2gFehT7J3uJMd9u6Iv/exec" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label>First name</label>
-            <input type="text" placeholder="Jane">
+            <input type="text" name="firstName" placeholder="Jane" required>
           </div>
           <div class="form-field">
             <label>Last name</label>
-            <input type="text" placeholder="Smith">
+            <input type="text" name="lastName" placeholder="Smith" required>
           </div>
         </div>
         <div class="form-field">
           <label>Work email</label>
-          <input type="email" placeholder="jane@company.com">
+          <input type="email" name="email" placeholder="jane@company.com" required>
         </div>
         <div class="form-field">
           <label>Company</label>
-          <input type="text" placeholder="Your company name">
+          <input type="text" name="company" placeholder="Your company name" required>
         </div>
         <div class="form-field">
           <label>Company stage</label>
-          <select>
+          <select name="companyStage" required>
             <option value="" disabled selected>Select your stage</option>
             <option>Pre-seed / Seed</option>
             <option>Series A</option>
@@ -1420,7 +1420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-field">
           <label>What do you need?</label>
-          <select>
+          <select name="whatTheyNeed" required>
             <option value="" disabled selected>Select a service</option>
             <option>GTM Strategy & Leadership</option>
             <option>Sales Process & Enablement</option>
@@ -1431,10 +1431,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-field">
           <label>Tell us about your situation</label>
-          <textarea placeholder="What's the challenge? What's the timeline? The more context, the better."></textarea>
+          <textarea name="message" placeholder="What's the challenge? What's the timeline? The more context, the better." required></textarea>
         </div>
-        <button class="btn-submit" onclick="handleSubmit(event)">Send it →</button>
-      </div>
+        <button type="submit" class="btn-submit" onclick="handleSubmit(event)">Send it →</button>
+      </form>
     </div>
   </div>
 </section>
